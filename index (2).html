@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOWNLOAD NOW!!!! 🔥🔥🔥 - Project Starforge</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap');
+
+  :root {
+    --dirt: #866043;
+    --grass: #5a8a1f;
+    --stone: #7a7a7a;
+    --creeper: #4a9a4a;
+    --gold: #FFD700;
+    --lava: #FF4500;
+    --sky: #6ab5ff;
+    --diamond: #4af7f7;
+    --nether: #8B0000;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; image-rendering: pixelated; }
+
+  body {
+    background-color: #1a1a2e;
+    font-family: 'Press Start 2P', monospace;
+    overflow-x: hidden;
+    cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='24'>⛏️</text></svg>"), auto;
+  }
+
+  /* Scrolling star background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+      radial-gradient(1px 1px at 10% 20%, white 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 50%, white 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 10%, white 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 70%, white 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 90%, white 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 30%, white 0%, transparent 100%),
+      radial-gradient(2px 2px at 20% 80%, rgba(255,215,0,0.8) 0%, transparent 100%),
+      radial-gradient(2px 2px at 70% 40%, rgba(74,247,247,0.8) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Minecraft dirt ground at bottom */
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--grass) 0px, var(--grass) 16px,
+      #4a7a18 16px, #4a7a18 32px
+    );
+    border-top: 4px solid #3d6614;
+    z-index: 0;
+    image-rendering: pixelated;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 80px;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    text-align: center;
+    padding: 30px 10px 20px;
+    animation: headerShake 0.5s infinite alternate;
+  }
+
+  @keyframes headerShake {
+    0% { transform: rotate(-1deg) scale(1); }
+    100% { transform: rotate(1deg) scale(1.02); }
+  }
+
+  .site-title {
+    font-size: clamp(16px, 4vw, 32px);
+    color: var(--gold);
+    text-shadow: 
+      4px 4px 0 #8B6914,
+      0 0 20px rgba(255,215,0,0.8),
+      0 0 40px rgba(255,165,0,0.5);
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: clamp(8px, 1.5vw, 12px);
+    color: var(--creeper);
+    text-shadow: 2px 2px 0 #1a3a1a;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ===== MARQUEE ===== */
+  .marquee-wrap {
+    background: var(--nether);
+    border: 4px solid var(--lava);
+    padding: 8px 0;
+    overflow: hidden;
+    margin: 16px 0;
+    box-shadow: 0 0 20px var(--lava);
+  }
+
+  .marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 10px;
+    color: white;
+    animation: marquee 12s linear infinite;
+    text-shadow: 0 0 8px var(--lava);
+  }
+
+  @keyframes marquee { from { transform: translateX(100vw); } to { transform: translateX(-100%); } }
+
+  /* ===== MEME GRID ===== */
+  .meme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .meme-card {
+    background: #2a2a3e;
+    border: 4px solid var(--stone);
+    padding: 12px;
+    text-align: center;
+    transition: transform 0.1s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .meme-card:hover {
+    transform: scale(1.05) rotate(2deg);
+    border-color: var(--gold);
+    z-index: 10;
+  }
+
+  .meme-card:nth-child(even):hover { transform: scale(1.05) rotate(-2deg); }
+
+  .meme-emoji {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 8px;
+    image-rendering: auto;
+    animation: float 2s ease-in-out infinite;
+  }
+
+  .meme-card:nth-child(2) .meme-emoji { animation-delay: 0.3s; }
+  .meme-card:nth-child(3) .meme-emoji { animation-delay: 0.6s; }
+  .meme-card:nth-child(4) .meme-emoji { animation-delay: 0.9s; }
+  .meme-card:nth-child(5) .meme-emoji { animation-delay: 1.2s; }
+  .meme-card:nth-child(6) .meme-emoji { animation-delay: 1.5s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .meme-text {
+    font-size: 7px;
+    color: white;
+    line-height: 1.6;
+    text-shadow: 1px 1px 0 black;
+  }
+
+  .meme-card.red { border-color: var(--lava); background: #3e1a1a; }
+  .meme-card.green { border-color: var(--creeper); background: #1a3e1a; }
+  .meme-card.blue { border-color: var(--diamond); background: #1a1a3e; }
+  .meme-card.gold { border-color: var(--gold); background: #3e3a1a; }
+
+  /* ===== DOWNLOAD SECTION ===== */
+  .download-section {
+    text-align: center;
+    margin: 32px 0;
+    padding: 24px;
+    background: linear-gradient(135deg, #0d0d1a 0%, #1a0d2e 50%, #0d1a0d 100%);
+    border: 6px solid var(--diamond);
+    box-shadow: 
+      0 0 30px var(--diamond),
+      inset 0 0 30px rgba(74,247,247,0.1);
+    position: relative;
+    animation: borderPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes borderPulse {
+    0%, 100% { box-shadow: 0 0 30px var(--diamond), inset 0 0 30px rgba(74,247,247,0.1); }
+    50% { box-shadow: 0 0 60px var(--diamond), 0 0 100px rgba(74,247,247,0.3), inset 0 0 50px rgba(74,247,247,0.2); }
+  }
+
+  .download-section::before {
+    content: '💎 LEGENDARY 💎';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a2e;
+    padding: 0 12px;
+    font-size: 8px;
+    color: var(--diamond);
+    white-space: nowrap;
+  }
+
+  .download-title {
+    font-size: clamp(10px, 2.5vw, 18px);
+    color: white;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 0 black;
+  }
+
+  .download-subtitle {
+    font-size: 7px;
+    color: #aaa;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+
+  .btn-download {
+    display: inline-block;
+    padding: 16px 32px;
+    background: linear-gradient(180deg, #5aaa2a 0%, #3d7a18 50%, #2a5a0d 100%);
+    color: white;
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(8px, 2vw, 14px);
+    text-decoration: none;
+    border: 4px solid #2a5a0d;
+    border-bottom: 6px solid #1a3a08;
+    border-right: 6px solid #1a3a08;
+    box-shadow: 
+      inset 0 2px 0 rgba(255,255,255,0.3),
+      0 0 20px rgba(90,170,42,0.8);
+    transition: all 0.05s;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    animation: btnGlow 1.5s ease-in-out infinite;
+  }
+
+  @keyframes btnGlow {
+    0%, 100% { box-shadow: inset 0 2px 0 rgba(255,255,255,0.3), 0 0 20px rgba(90,170,42,0.8); }
+    50% { box-shadow: inset 0 2px 0 rgba(255,255,255,0.3), 0 0 40px rgba(90,170,42,1), 0 0 80px rgba(90,170,42,0.5); }
+  }
+
+  .btn-download:hover {
+    background: linear-gradient(180deg, #6abb38 0%, #4a8a22 50%, #365e18 100%);
+    transform: translateY(-2px);
+  }
+
+  .btn-download:active {
+    transform: translateY(3px);
+    border-bottom: 4px solid #1a3a08;
+    border-right: 4px solid #1a3a08;
+  }
+
+  .download-warning {
+    font-size: 6px;
+    color: var(--lava);
+    margin-top: 12px;
+    animation: blink 0.8s step-end infinite;
+  }
+
+  /* ===== CREEPER COUNTER ===== */
+  .counter-box {
+    background: #1a1a1a;
+    border: 4px solid var(--stone);
+    padding: 12px;
+    text-align: center;
+    margin: 16px 0;
+    font-size: 8px;
+    color: var(--creeper);
+  }
+
+  .counter-number {
+    font-size: 20px;
+    color: var(--gold);
+    display: block;
+    margin: 8px 0;
+    text-shadow: 2px 2px 0 #8B6914;
+  }
+
+  /* ===== RANDOM FLOATING ITEMS ===== */
+  .floating-item {
+    position: fixed;
+    font-size: 24px;
+    pointer-events: none;
+    z-index: 2;
+    animation: floatAcross linear infinite;
+    image-rendering: auto;
+  }
+
+  .floating-item:nth-child(1)  { top: 10%; animation-duration: 8s;  animation-delay: 0s;   left: -50px; }
+  .floating-item:nth-child(2)  { top: 30%; animation-duration: 11s; animation-delay: 2s;   left: -50px; }
+  .floating-item:nth-child(3)  { top: 60%; animation-duration: 7s;  animation-delay: 4s;   left: -50px; }
+  .floating-item:nth-child(4)  { top: 80%; animation-duration: 13s; animation-delay: 1s;   left: -50px; }
+  .floating-item:nth-child(5)  { top: 45%; animation-duration: 9s;  animation-delay: 6s;   left: -50px; }
+  .floating-item:nth-child(6)  { top: 20%; animation-duration: 14s; animation-delay: 3s;   left: -50px; }
+
+  @keyframes floatAcross {
+    from { transform: translateX(-60px) rotate(0deg); }
+    to   { transform: translateX(110vw) rotate(720deg); }
+  }
+
+  /* ===== NOTICE BOX ===== */
+  .notice {
+    background: #3e1a00;
+    border: 4px dashed var(--lava);
+    padding: 16px;
+    margin: 16px 0;
+    font-size: 7px;
+    color: #ff9966;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .notice strong { color: var(--gold); font-size: 9px; display: block; margin-bottom: 8px; }
+
+  /* ===== FAKE REVIEWS ===== */
+  .reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .review-card {
+    background: #16213e;
+    border: 3px solid #4a4a7a;
+    padding: 10px;
+    font-size: 6px;
+    color: #ccc;
+    line-height: 1.8;
+  }
+
+  .review-card .reviewer {
+    color: var(--gold);
+    font-size: 7px;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .stars { color: var(--gold); letter-spacing: 2px; }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 6px;
+    color: #555;
+    line-height: 2.5;
+    margin-bottom: 60px;
+  }
+
+  /* ===== SECTION DIVIDER ===== */
+  .divider {
+    height: 8px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--grass) 0px, var(--grass) 8px,
+      var(--dirt) 8px, var(--dirt) 16px
+    );
+    margin: 20px 0;
+  }
+
+  /* ===== PIXEL ART CREEPER ===== */
+  .creeper-art {
+    font-size: 48px;
+    text-align: center;
+    display: block;
+    filter: drop-shadow(0 0 10px var(--creeper));
+    animation: creeper 3s ease-in-out infinite;
+  }
+
+  @keyframes creeper {
+    0%, 90%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px var(--creeper)); }
+    95% { transform: scale(1.3); filter: drop-shadow(0 0 30px #ff4444); }
+  }
+
+  /* ===== POPUP ===== */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0d0d1a;
+    border: 4px solid var(--gold);
+    padding: 24px;
+    z-index: 999;
+    text-align: center;
+    font-size: 8px;
+    color: white;
+    display: none;
+    box-shadow: 0 0 50px var(--gold);
+    max-width: 90vw;
+  }
+
+  .popup.show { display: block; animation: popIn 0.3s ease; }
+  @keyframes popIn { from { transform: translate(-50%,-50%) scale(0); } to { transform: translate(-50%,-50%) scale(1); } }
+
+  .popup-btn {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: var(--lava);
+    border: 3px solid #8B2200;
+    color: white;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 7px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    .reviews { grid-template-columns: 1fr; }
+    .meme-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating items across screen -->
+<span class="floating-item">🐸</span>
+<span class="floating-item">💣</span>
+<span class="floating-item">🐔</span>
+<span class="floating-item">⛏️</span>
+<span class="floating-item">💀</span>
+<span class="floating-item">🧨</span>
+
+<!-- Popup on download -->
+<div class="popup" id="popup">
+  <div style="font-size:32px;margin-bottom:12px">🎉</div>
+  <div style="color:var(--gold);margin-bottom:8px">ACHIEVEMENT UNLOCKED!</div>
+  <div style="font-size:7px;color:#aaa;line-height:2">Download starting...<br>You are now officially based.</div>
+  <button class="popup-btn" onclick="document.getElementById('popup').classList.remove('show')">OK COOL</button>
+</div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="site-title">⚡ PROJECT STARFORGE ⚡</div>
+    <div class="subtitle">>>> THE MOST EPIC MODPACK OF ALL TIME (PROBABLY) <<<</div>
+  </div>
+
+  <!-- Marquee -->
+  <div class="marquee-wrap">
+    <span class="marquee-text">
+      🔥 FREE TO DOWNLOAD 🔥 | 💀 1000+ MODS (not really) 💀 | 🐸 HI MOM 🐸 | 
+      ⚠️ MAY CAUSE EXCESSIVE FUN ⚠️ | 💎 DIAMOND TIER GAMING 💎 | 
+      🎺 DA DA DA DAAA 🎺 | 🧱 SPONSORED BY DIRT BLOCKS 🧱 | 
+      ✅ CERTIFIED BASED ✅ | 🐔 CLICK THE CHICKEN 🐔 | 
+      🔥 FREE TO DOWNLOAD 🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>
+  </div>
+
+  <!-- Meme Grid Row 1 -->
+  <div class="meme-grid">
+    <div class="meme-card red">
+      <span class="meme-emoji">😱</span>
+      <div class="meme-text">ME WHEN I SEE ANOTHER CREEPER AT NIGHT</div>
+    </div>
+    <div class="meme-card green">
+      <span class="meme-emoji">🐸</span>
+      <div class="meme-text">THIS IS THE WAY.<br><br>froglight moment.</div>
+    </div>
+    <div class="meme-card gold">
+      <span class="meme-emoji">🪣</span>
+      <div class="meme-text">WATER BUCKET CLUTCH SPEEDRUN ANY%</div>
+    </div>
+    <div class="meme-card blue">
+      <span class="meme-emoji">💎</span>
+      <div class="meme-text">FOUND AT Y=-59<br>FINALLY REAL<br>(it was iron)</div>
+    </div>
+    <div class="meme-card">
+      <span class="meme-emoji">🎺</span>
+      <div class="meme-text">DOOT DOOT<br><br>skeleton.mp3</div>
+    </div>
+    <div class="meme-card red">
+      <span class="meme-emoji">💣</span>
+      <div class="meme-text">SSSSSS...<br><br>nice base you got there</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Notice -->
+  <div class="notice">
+    <strong>⚠️ IMPORTANT NOTICE ⚠️</strong>
+    This modpack was made with 100% organic free-range code.<br>
+    No chickens were harmed. Several creepers were.<br>
+    Side effects may include: excessive playing, loss of sleep,<br>
+    and saying "just one more night" at 4am.
+  </div>
+
+  <!-- Download Section - CENTER OF PAGE -->
+  <div class="download-section">
+    <span class="creeper-art">🤖</span>
+    <div class="download-title" style="margin-top:16px">GET THE MODPACK</div>
+    <div class="download-subtitle">
+      Click button. Get modpack. Simple.<br>
+      Even a zombie could do it. (they tried. they couldn't.)
+    </div>
+
+    <a 
+      class="btn-download" 
+      href="https://github.com/YOURUSER/YOURREPO/releases/latest/download/YOURFILE.zip"
+      onclick="document.getElementById('popup').classList.add('show'); return true;"
+      download
+    >
+      ⬇️ DOWNLOAD NOW ⬇️
+    </a>
+
+    <div class="download-warning">
+      ⚠️ WARNING: EXTREMELY ADDICTIVE ⚠️
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Second meme row -->
+  <div class="meme-grid">
+    <div class="meme-card blue">
+      <span class="meme-emoji">🐠</span>
+      <div class="meme-text">CLOWNFISH<br>SPOTTED<br>IN OCEAN<br>(unrelated)</div>
+    </div>
+    <div class="meme-card gold">
+      <span class="meme-emoji">🥔</span>
+      <div class="meme-text">POTATO<br>FARM GO<br>BRRRRR</div>
+    </div>
+    <div class="meme-card green">
+      <span class="meme-emoji">🌳</span>
+      <div class="meme-text">TREE FARM<br>ACTIVATED<br>*lag*</div>
+    </div>
+    <div class="meme-card red">
+      <span class="meme-emoji">🔥</span>
+      <div class="meme-text">ACCIDENTALLY<br>BURNED<br>HOUSE<br>DOWN.<br>10/10</div>
+    </div>
+  </div>
+
+  <!-- Reviews -->
+  <div style="font-size:10px;color:var(--gold);text-align:center;margin:20px 0;">
+    ⭐ TOTALLY REAL REVIEWS ⭐
+  </div>
+  <div class="reviews">
+    <div class="review-card">
+      <span class="reviewer">🧑 xX_Steve_Xx_69</span>
+      <span class="stars">★★★★★</span>
+      <br><br>
+      bro i downloaded this and my fps went from 12 to 11. peak performance. 11/10 would lag again
+    </div>
+    <div class="review-card">
+      <span class="reviewer">🧙 NotHerobrine</span>
+      <span class="stars">★★★★★</span>
+      <br><br>
+      i was building a dirt house. this modpack made me build a dirt house faster. revolutionary
+    </div>
+    <div class="review-card">
+      <span class="reviewer">🐸 FrogEnthusiast</span>
+      <span class="stars">★★★★★</span>
+      <br><br>
+      there's a frog in here. that's all i needed. goodbye
+    </div>
+    <div class="review-card">
+      <span class="reviewer">💀 CreeperedMyself</span>
+      <span class="stars">★★★★★</span>
+      <br><br>
+      downloaded at 2am. lost 400 diamonds to a creeper. cried. 5 stars.
+    </div>
+  </div>
+
+  <!-- Counter -->
+  <div class="counter-box">
+    😤 PEOPLE WHO DOWNLOADED AND DIDN'T DIE TO A CREEPER:
+    <span class="counter-number" id="counter">0</span>
+    (estimate)
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Footer -->
+  <div class="footer">
+    made with 💎 and probably too much caffeine<br>
+    © 2026 Project Starforge | All Rights Reserved | especially the dirt blocks<br>
+    <span style="color:var(--creeper)">SSSSSSSSSponsored by: nobody. we're broke.</span><br><br>
+    <span style="font-size:5px;color:#333">
+      by downloading you agree to not blame us when a creeper explodes your house.<br>
+      this website was tested on: one (1) monitor. results may vary.<br>
+      no endermen were looked at directly during the making of this site.
+    </span>
+  </div>
+
+</div>
+
+<script>
+  // Counter goes up randomly
+  let count = Math.floor(Math.random() * 9000) + 1000;
+  document.getElementById('counter').textContent = count.toLocaleString();
+  setInterval(() => {
+    if (Math.random() > 0.7) {
+      count += Math.floor(Math.random() * 3);
+      document.getElementById('counter').textContent = count.toLocaleString();
+    }
+  }, 2000);
+
+  // Konami code easter egg
+  let keys = [];
+  const konamiCode = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  document.addEventListener('keydown', e => {
+    keys.push(e.key);
+    if (keys.length > 10) keys.shift();
+    if (keys.join(',') === konamiCode.join(',')) {
+      document.body.style.animation = 'none';
+      document.body.style.background = '#0f0';
+      setTimeout(() => document.body.style.background = '#1a1a2e', 1000);
+    }
+  });
+</script>
+</body>
+</html>
